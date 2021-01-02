@@ -1,0 +1,19 @@
+# ignore Directories
+wp-admin
+wp-includes
+wp-content/*
+wp-content/themes/twenty*
+
+!wp-content/themes/
+!wp-content/themes/movies/*
+
+#ignore files
+.htaccess
+index.php
+license.txt
+readme.html
+wp-*.php
+xmlrpc.php
+
+!wp-content/themes/movies/index.php
+!.gitignore
