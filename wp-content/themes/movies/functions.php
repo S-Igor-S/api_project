@@ -36,7 +36,7 @@ new AddMetaBoxes($id = 'revenue', $title = 'Revenue', $screen = 'movies');
 new AddMetaBoxes($id = 'runtime', $title = 'Runtime', $screen = 'movies');
 new AddMetaBoxes($id = 'production_countries', $title = 'Production countries', $screen = 'movies');
 
-//Add cron processes (add movies)
+//Add Cron processes (add movies)
 
 $cronJobs = new CronProcesses;
 $cronJobs->activate_cron();
