@@ -1,13 +1,18 @@
 <?php
-ini_set ('max_execution_time', '300');
+
+//Config file
+
+require_once 'config.php';
+
 //Classes
 
-require_once 'classes/Styles.php';
-require_once 'classes/PostMovies.php';
-require_once 'classes/Shortcodes.php';
-require_once 'classes/AddMetaBoxes.php';
+require_once CLASSES_PATH.'Styles.php';
+require_once CLASSES_PATH.'PostMovies.php';
+require_once CLASSES_PATH.'Shortcodes.php';
+require_once CLASSES_PATH.'AddMetaBoxes.php';
+require_once CLASSES_PATH.'CronProcesses.php';
 
-//Подключение стилей
+//CSS && JS
 
 $style = new Styles;
 $style->init();
@@ -31,10 +36,9 @@ new AddMetaBoxes($id = 'revenue', $title = 'Revenue', $screen = 'movies');
 new AddMetaBoxes($id = 'runtime', $title = 'Runtime', $screen = 'movies');
 new AddMetaBoxes($id = 'production_countries', $title = 'Production countries', $screen = 'movies');
 
-//Добавляем фильмы
-// !Подключать только для загрузки фильмов в базу данных, после закомментировать
-require_once 'classes/AddMovies.php';
+//Add cron processes (add movies)
 
-$addMovies = new AddMovies();
-$addMovies->init();
+$cronJobs = new CronProcesses;
+$cronJobs->activate_cron();
+
 ?>
