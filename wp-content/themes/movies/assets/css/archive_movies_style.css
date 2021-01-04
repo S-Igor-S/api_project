@@ -1,0 +1,32 @@
+.mw-theme-movies-archive-page{
+    align-items: center;
+}
+
+.mw-theme-movies-post-place{
+    vertical-align: top;
+    margin: 20px;
+    display: inline-block;
+    width: 350px;
+    
+    text-align: center;
+    /* float: right; */
+}
+
+.mw-theme-movies-title{
+    height: 100px;
+}
+
+.mw-theme-movies-logo{
+    
+    height: 550px; 
+    /* text-align: center; */
+}
+
+.posts_pagination{
+    text-align: center;
+}
+
+a{
+
+    text-decoration: none;
+}
