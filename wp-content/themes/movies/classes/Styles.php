@@ -3,17 +3,15 @@
 class Styles 
 {
 
-    private function load_styles()
-    {
-        //$ver = filemtime( get_template_directory().'/assets/css/style.css';
-        return wp_enqueue_style($handle = 'custom-css', $src = get_template_directory_uri().'/assets/css/style.css');
-    }
-
     public function init()
     {
-        add_action('wp_enqueue_scripts', function () {
-            $this->load_styles();
-        });
+        add_action('wp_enqueue_scripts', [$this, 'load_styles']);
+    }
+
+    public function load_styles()
+    {
+        wp_enqueue_style($handle = 'custom-single-movie-css', $src = get_template_directory_uri().'/assets/css/single_movie_style.css');
+        wp_enqueue_style($handle = 'custom-archive-movies-css', $src = get_template_directory_uri().'/assets/css/archive_movies_style.css');
     }
 
 }
