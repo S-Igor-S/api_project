@@ -11,18 +11,14 @@ class Shortcodes
 
     public function wp_show_movies_archive_shortcode()
     {
-        ?>
 
-        <div class="mw-theme-movies-archive-page">
+        print_r("<div class='mw-theme-movies-archive-page'>");
 
-        <?php
         while(have_posts())
         {
-            ?>
 
-            <div class="mw-theme-movies-post-place">
-    
-            <?php
+            print_r("<div class='mw-theme-movies-post-place'>");
+
             the_post();
             the_title("<h2 class='mw-theme-movies-title'><a href=".get_permalink().">", "</a></h2>");
             wp_link_pages();
@@ -33,23 +29,22 @@ class Shortcodes
                 <img src=<?=$metaboxes['_poster'][0]?> alt='No poster' width='330' height='530'>
             </div>
 
-            </div>
             <?php
+
+            print_r("</div>");
+            
         }
-        ?>
 
-        </div>
+        print_r("</div>");
 
-        <?php
     }
+
 
     public function wp_show_single_movie_shortcode()
     {
-        ?>
 
-        <div class="mw-theme-movie-details-page">
+        print_r("<div class='mw-theme-movie-details-page'>");
 
-        <?php
         while(have_posts())
         {
             the_post();
@@ -62,9 +57,10 @@ class Shortcodes
                 <img src=<?=$metaboxes['_poster'][0]?> alt='No poster'>
             </div>
 
-            <div class='mw-theme-movie-details-column'>
-
             <?php
+
+            print_r("<div class='mw-theme-movie-details-column'>");
+
             foreach($metaboxes as $key => $value)
             {
                 if($key[0] == '_')
@@ -81,27 +77,19 @@ class Shortcodes
 
                 <?php
             }
-            ?>
             
-            </div>
+            print_r("</div>");
             
-            <div class="mw-theme-movie-overview-column">
+            print_r("<div class='mw-theme-movie-overview-column'>");
 
-            <?php
             the_content();
-            ?>
 
-            </div>
-
-            <?php
-
+            print_r("</div>");
 
         }
-        ?>
 
-        </div>
+        print_r("</div>");
 
-        <?php
     }
 
 }
