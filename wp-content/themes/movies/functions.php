@@ -47,4 +47,10 @@ $cronJobs = new CronProcesses;
 $cronJobs->activate_cron();
 
 
+//Menu
+register_nav_menus(array(
+    'top'    => 'Верхнее меню',    //Название месторасположения меню в шаблоне
+    'bottom' => 'Нижнее меню'      //Название другого месторасположения меню в шаблоне
+));
+
 ?>

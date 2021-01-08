@@ -24,11 +24,27 @@
 <div class="wrapper">
     <?php wp_head(); ?>
     <header class="header grid">
+
         <h1>Movies</h1>
         <ul class = "head_menu grid">
-            <li>Main</li>
-            <li>All movies</li>
-            <li>Genre</li>
+            <?php
+            wp_nav_menu( array(
+                'menu'=>'head-menu-home',
+                'menu_class'=>'menu',
+                'theme_location'=>'top'
+            ) );
+            wp_nav_menu( array(
+                'menu'=>'head-menu-all-mov',
+                'menu_class'=>'menu',
+                'theme_location'=>'top'
+            ) );
+            wp_nav_menu( array(
+                'menu'=>'head-menu-send-mov',
+                'menu_class'=>'menu',
+                'theme_location'=>'top'
+            ) );
+            ?>
         </ul>
+
     </header>
 </div>
