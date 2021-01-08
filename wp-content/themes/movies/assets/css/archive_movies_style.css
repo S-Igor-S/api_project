@@ -1,5 +1,8 @@
 .mw-theme-movies-archive-page{
     align-items: center;
+    margin: 50px;
+    background-color: #FFEBCD;
+    border-radius: 20px;
 }
 
 .mw-theme-movies-post-place{
@@ -13,8 +16,11 @@
 }
 
 .mw-theme-movies-title{
-    height: 100px;
+    height: 70px;
+    text-align: center;
+
 }
+
 
 .mw-theme-movies-logo{
     
@@ -27,6 +33,29 @@
 }
 
 a{
-
+    font-family: "Courier New", Courier, monospace;
     text-decoration: none;
+    color: #A0522D;
+}
+.grid{
+    display: grid;
+}
+.header{
+    grid-template-columns: 2fr 4fr;
+}
+.head_menu{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+img{
+    border-radius: 20px;
+}
+h1{
+    padding-left: 40px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 40px;
+    color: #A0522D;
+}
+.navigation{
+    font-family: "Courier New", Courier, monospace;
+    color: #A0522D;
 }
