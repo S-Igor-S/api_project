@@ -4,11 +4,11 @@
 <?php
     
     do_shortcode('[add_movies_shortcode]');
-    
-    $apiRequest = new ApiRequest($_REQUEST);
-    $apiRequest->send_request();
+   
     if(!empty($_REQUEST))
     {
+        $apiRequest = new ApiRequest($_REQUEST);
+        $apiRequest->send_request();
         header("Location: ".$_SERVER['REQUEST_URI']);
     }
 

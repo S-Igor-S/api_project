@@ -3,7 +3,6 @@ class ApiRequest
 {
 
     private $post_array;
-    
     public function __construct ($post_array)
     {
         $this->post_array = $post_array;
@@ -11,12 +10,12 @@ class ApiRequest
          
     public function send_request()
     {
-        $api_response = wp_remote_post($url = 'http://movie-world.top/wp-json/wp/v2/movie', array(
- 	        'headers' => array(
-		        'Authorization' => 'Basic QVBJIENsaWVudDo3b3NkIFRMa04gb016QyBsMGFOIEZpWlIgZENXSg==',
-	        ),
-            'body' => $this->request_body(),
-         ));
+         $api_response = wp_remote_post($url = 'http://movie-world.top/wp-json/wp/v2/movie', array(
+            'headers' => array(
+               'Authorization' => 'Basic '.get_option('api_key'),
+           ),
+           'body' => $this->request_body(),
+        ));
     }
 
     private function request_body()

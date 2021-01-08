@@ -25,10 +25,15 @@
     <?php wp_head(); ?>
     <header class="header grid">
         <h1>Movies</h1>
-        <ul class = "head_menu grid">
-            <li>Main</li>
-            <li>All movies</li>
-            <li>Genre</li>
-        </ul>
+        <?php wp_nav_menu(
+            array(
+                'menu' => 'nav-menu',
+                'theme_location' => 'nav-menu',
+                'container' => 'nav', 
+                'menu_class' => 'menu-main',
+                'before' => '<div class"head_menu grid"><h2>',
+                'after' => '</h2></div>',)            
+        ); ?>
     </header>
 </div>
+
