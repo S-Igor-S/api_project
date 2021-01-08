@@ -23,6 +23,7 @@ class Styles
         wp_enqueue_style('slick-theme', get_template_directory_uri().'/assets/slick/slick-theme.css');
     
         wp_enqueue_script('slick-js', get_template_directory_uri().'/assets/slick/slick.js');
+
     }
 
 }

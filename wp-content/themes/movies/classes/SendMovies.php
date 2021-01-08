@@ -3,7 +3,6 @@ class ApiRequest
 {
 
     private $post_array;
-
     public function __construct ($post_array)
     {
         $this->post_array = $post_array;

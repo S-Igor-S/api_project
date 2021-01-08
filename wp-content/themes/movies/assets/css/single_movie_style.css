@@ -1,0 +1,93 @@
+/************* Big Block Elements *************/
+.mw-theme-movie-details-page {
+    margin-left: 50px;
+    border-radius: 20px;
+    background-color: #FFEBCD;
+    padding-left: 50px;
+    padding-top: 20px;
+
+}
+/************* Big Block Elements *************/
+
+
+/************* Small Block Elements *************/
+.mw-theme-movie-title {
+    font-size: 33px;
+    margin-bottom: 17px;
+    margin-top: 20px;
+    font-family: "Courier New", Courier, monospace;
+    color: #A0522D;
+
+}
+
+.mw-theme-movie-original-title {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+/************* Small Block Elements *************/
+
+
+/************* Column Elements *************/
+.mw-theme-movie-logo-column {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.mw-theme-movie-details-column {
+    display: inline-block;
+    width: 450px;
+    margin-right: 20px;
+    vertical-align: top;
+    line-height: 2em;
+    font-size: 17px;
+    font-family: "Courier New", Courier, monospace;
+    color: #A0522D;
+}
+
+.mw-theme-movie-overview-column {
+    display: inline-block;
+    width: 600px;
+    vertical-align: top;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 1.5em;
+    text-justify: inter-word;
+    font-family: "Courier New", Courier, monospace;
+    color: #A0522D;
+    padding-top: -10px;
+}
+/************* Column Elements *************/
+
+
+/************* Inline Elements *************/
+.mw-theme-movie-desc-headers {
+    font-size: 23px;
+    color: #A0522D;
+}
+
+.mw-theme-movie-desc {
+    font-size: 20px;
+    color: #A0522D;
+}
+/************* Inline Elements *************/
+
+img{
+    border-radius: 20px;
+}
+.grid{
+    display: grid;
+}
+.header{
+    grid-template-columns: 2fr 4fr;
+}
+.head_menu{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.right{
+    font-family: "Courier New", Courier, monospace;
+    color: #A0522D;
+    font-size: 15px;
+}
+
+

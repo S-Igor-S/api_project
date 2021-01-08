@@ -13,6 +13,7 @@ require_once CLASSES_PATH.'AddMetaBoxes.php';
 require_once CLASSES_PATH.'CronProcesses.php';
 require_once CLASSES_PATH.'ApiCredits.php';
 
+
 //CSS && JS
 
 $style = new Styles;
@@ -37,6 +38,7 @@ new AddMetaBoxes($id = 'revenue', $title = 'Revenue', $screen = 'movies');
 new AddMetaBoxes($id = 'runtime', $title = 'Runtime', $screen = 'movies');
 new AddMetaBoxes($id = 'production_countries', $title = 'Production countries', $screen = 'movies');
 
+
 //Add cron processes (add movies)
 
 $cronProcesses = new CronProcesses;
@@ -56,4 +58,5 @@ function register_my_menus() {
         )
     );
 }
+
 ?>

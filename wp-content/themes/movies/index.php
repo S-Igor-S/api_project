@@ -10,20 +10,11 @@
     </main>
     
     <?php
-    // $query = new WP_Query( array( 
-    //     'developer_taxonomy' => 'CD PROJEKT RED',
-    //     'post_type' => 'games',
-    //     ) );
-    // $posts = new WP_Query( array( 
-    //     'meta_key' => 'game_genre', 
-    //     'meta_value' => 'Adventure', 
-    //     'post_type' => 'games',
-    //     ) );
-    //     while ($posts->have_posts() ) {
-    //         $posts->the_post();
-        
-    //         the_title(); // выведем заголовок поста
-    //     }
+    $cron_processes = get_option( 'cron' );
+
+    var_dump( $cron_processes );
+    echo "<br>";
+    print_r(time());
     ?>
 </div>
-<?php get_footer() ?>
+<?php get_footer()?>
