@@ -1,13 +1,7 @@
 <?php
-namespace classes;
 
 class DownloadMovies
 {
-
-    public function init()
-    {
-        add_shortcode('add_movies', [$this, 'add_movies']);
-    }
 
     public function add_movies()
     {
@@ -35,13 +29,14 @@ class DownloadMovies
             
             if($this->duplication_check($movie['original_id']))
             {
-                wp_delete_post($this->duplication_check($movie['original_id']), true);
+                $post = array_merge($post, ['ID' => $this->duplication_check($movie['original_id'])]);
             }
             wp_insert_post($post, true);
         }
     }
 
-    //Download movies from API
+    // Download movies from API
+
     private function download_movies()
     {
         $movies = [];
@@ -53,7 +48,8 @@ class DownloadMovies
         return $movies;
     }
 
-    //Connect to API
+    // Connect to API
+
     private function api_request($page = null)
     {
         $url = "http://ec2-18-219-233-220.us-east-2.compute.amazonaws.com/wpr/wp-json/mw/v1/movies?page=".$page;
@@ -61,7 +57,8 @@ class DownloadMovies
         return json_decode( wp_remote_retrieve_body( $response ), true );
     }
 
-    //Checking for duplicate in the database
+    // Checking for duplicate in the database
+
     private function duplication_check($original_id)
     {
         global $wpdb;
