@@ -1,5 +1,10 @@
 <?php
 
+// CSS
+wp_register_style( 'my_style', get_template_directory_uri() . '/style.css');
+wp_enqueue_style( 'my_style');
+
+
 //Config file
 
 require_once 'config.php';
@@ -40,5 +45,6 @@ new AddMetaBoxes($id = 'production_countries', $title = 'Production countries', 
 
 $cronJobs = new CronProcesses;
 $cronJobs->activate_cron();
+
 
 ?>

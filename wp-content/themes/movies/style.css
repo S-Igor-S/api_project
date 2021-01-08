@@ -1,0 +1,18 @@
+/*
+Theme Name: MoviesTheme
+Author: the WordPress team
+Version: 1.0
+*/
+body{
+  background-color: #FFDEAD;
+}
+li{
+  list-style-type:none;
+}
+.head_menu{
+  font-family: "Courier New", Courier, monospace;
+  font-size: 27px;
+  color: #A0522D;
+}
+
+
