@@ -1,5 +1,4 @@
 <?php
-// namespace classes;
 
 class DownloadMovies
 {
@@ -16,10 +15,6 @@ class DownloadMovies
                 'post_name' => $movie['original_title'],
                 'post_status' => 'publish',
                 'post_type' => 'movies',
-                'tax_input' => [
-                    'genre' => $movie['genres'],
-                    'country' => $movie['production_countries'],
-                ],
                 'meta_input' => [
                     'genres' => $movie['genres'],
                     'release_date' => $movie['release_date'],
@@ -34,7 +29,6 @@ class DownloadMovies
             
             if($this->duplication_check($movie['original_id']))
             {
-                // wp_delete_post($this->duplication_check($movie['original_id']), true);
                 $post = array_merge($post, ['ID' => $this->duplication_check($movie['original_id'])]);
             }
             wp_insert_post($post, true);
@@ -42,6 +36,7 @@ class DownloadMovies
     }
 
     // Download movies from API
+
     private function download_movies()
     {
         $movies = [];
@@ -54,6 +49,7 @@ class DownloadMovies
     }
 
     // Connect to API
+
     private function api_request($page = null)
     {
         $url = "http://ec2-18-219-233-220.us-east-2.compute.amazonaws.com/wpr/wp-json/mw/v1/movies?page=".$page;
@@ -62,6 +58,7 @@ class DownloadMovies
     }
 
     // Checking for duplicate in the database
+
     private function duplication_check($original_id)
     {
         global $wpdb;

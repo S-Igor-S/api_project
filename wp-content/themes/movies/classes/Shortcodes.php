@@ -20,12 +20,13 @@ class Shortcodes
     {
 
         print_r("<div class='mw-theme-movies-archive-page'>");
-        
+
         while(have_posts())
         {
-            the_post();
 
             print_r("<div class='mw-theme-movies-post-place'>");
+
+            the_post();
             
             the_title("<h2 class='mw-theme-movies-title'><a href=".get_permalink().">", "</a></h2>");
             wp_link_pages();
@@ -45,8 +46,9 @@ class Shortcodes
         print_r("</div>");
 
     }
-
+  
     //Show single movie
+
 
     public function wp_show_single_movie_shortcode()
     {
@@ -85,10 +87,6 @@ class Shortcodes
 
                 <?php
             }
-            // echo "<pre>";
-            // print_r(wp_get_post_terms(get_the_id(), 'genre', ['fields' => 'names'])[0]);
-            // echo "</pre>";
-            // echo "<br>";
             
             print_r("</div>");
             
@@ -101,6 +99,7 @@ class Shortcodes
         }
 
         print_r("</div>");
+
 
     }
 
@@ -144,6 +143,7 @@ class Shortcodes
         </form>
 
         <?php
+
     }
 
 }
